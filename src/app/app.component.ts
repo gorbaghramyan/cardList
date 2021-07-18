@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Card } from './card/card.component'
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'cardList';
+  cards: Card[] = [];
+
+  addItem() {
+    if(this.cards?.length === 10) {
+      alert('You are not able to add new cards your limit reached')
+    } else {
+      this.cards.push(new Card());
+    }
+  }
+  remove() {
+    this.cards.shift()
+  }
+  removeAll() {
+    this.cards = []
+  }
 }

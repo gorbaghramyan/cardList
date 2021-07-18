@@ -1,0 +1,11 @@
+.card {
+    width: 250px;
+    margin: 20px auto;
+    padding: 10px 40px;
+    background-image: linear-gradient(to right bottom, #260b3cbd, #a053df);
+    color: white;
+}
+
+h1 {
+    margin: auto;
+}
